@@ -18,10 +18,10 @@ server.use(
 );
 server.use(morgan("dev"));
 
-server.get("/", (req, res, next) => {
-  console.log("someone got menu");
-  res.send("menu:what do you want? food or water?");
-});
+// server.get("/", (req, res, next) => {
+//   console.log("someone got menu");
+//   res.send("menu:what do you want? food or water?");
+// });
 
 // Sign UP post
 server.post("/signup", function (req, res, next) {

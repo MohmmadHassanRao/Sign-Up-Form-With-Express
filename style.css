@@ -533,7 +533,7 @@ input {
 }
 
 .card-3 .card-heading {
-  background: url("/dota.png") top left/cover no-repeat;
+  background: url("dota.png") top left/cover no-repeat;
   display: table-cell;
   width: 50%;
 }
