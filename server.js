@@ -23,11 +23,6 @@ server.use(morgan("dev"));
 //   res.send("menu:what do you want? food or water?");
 // });
 
-server.get("/", (req, res) => {
-  res.send("welcome to sv");
-  console.log("welcome to server");
-});
-
 // Sign UP post
 server.post("/signup", function (req, res, next) {
   console.log("input ==>" + JSON.stringify(req.body));
