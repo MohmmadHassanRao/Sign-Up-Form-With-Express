@@ -1,4 +1,3 @@
-const url = "https://signup-form-express.herokuapp.com/";
 const signUp = () => {
   let uName = document.getElementById("name").value;
   let uEmail = document.getElementById("email").value;
@@ -12,7 +11,8 @@ const signUp = () => {
   console.log(userData);
 
   const Http = new XMLHttpRequest();
-
+  // const url = "http://192.168.1.105:5000/signup";
+  const url = "https://signup-form-express.herokuapp.com/";
   Http.open("POST", url);
 
   Http.setRequestHeader("Content-Type", "application/json");
@@ -36,7 +36,7 @@ const login = () => {
   };
 
   const Http = new XMLHttpRequest();
-
+  const url = "http://192.168.1.105:5000/login";
   Http.open("POST", url);
 
   Http.setRequestHeader("Content-Type", "application/json");
