@@ -44,6 +44,7 @@ server.post("/login", function (req, res, next) {
 
   for (let i = 0; i < users.length; i++) {
     // console.log(JSON.parse(users[i]).userEmail);
+
     if (
       JSON.parse(users[i]).userEmail === email &&
       JSON.parse(users[i]).userPassword === password

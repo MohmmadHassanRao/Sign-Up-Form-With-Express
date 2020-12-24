@@ -11,8 +11,8 @@ const signUp = () => {
   console.log(userData);
 
   const Http = new XMLHttpRequest();
-  // const url = "http://192.168.1.105:5000/signup";
-  const url = "https://signup-form-express.herokuapp.com/";
+  // const url = "http://192.168.50.236:5000/signup";
+  const url = "https://signup-form-express.herokuapp.com/signup";
   Http.open("POST", url);
 
   Http.setRequestHeader("Content-Type", "application/json");
@@ -36,7 +36,8 @@ const login = () => {
   };
 
   const Http = new XMLHttpRequest();
-  const url = "http://192.168.1.105:5000/login";
+  // const url = "http://192.168.50.236:5000/login";
+  const url = "https://signup-form-express.herokuapp.com/login";
   Http.open("POST", url);
 
   Http.setRequestHeader("Content-Type", "application/json");
@@ -44,8 +45,26 @@ const login = () => {
 
   Http.onreadystatechange = (e) => {
     console.log(Http.responseText);
+    // let a = JSON.parse(Http.responseText);
+    document.getElementById("uData").innerHTML = Http.responseText;
   };
   //   window.location.href = "/login.html";
 
   return false;
 };
+
+// const showData = () => {
+//   const Http = new XMLHttpRequest();
+//   const url = "http://192.168.50.236:3000/login";
+//   Http.open("POST", url);
+
+//   Http.setRequestHeader("Content-Type", "application/json");
+//   Http.send(JSON.stringify(userLoginData));
+
+//   Http.onreadystatechange = (e) => {
+//     console.log(Http.responseText);
+//   };
+//   //   window.location.href = "/login.html";
+
+//   return false;
+// };
