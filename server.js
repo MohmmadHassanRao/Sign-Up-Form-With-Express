@@ -18,12 +18,6 @@ server.use(
 );
 server.use(morgan("dev"));
 
-// server.get("/", (req, res, next) => {
-//   console.log("someone got menu");
-//   res.send("menu:what do you want? food or water?");
-// });
-
-// Sign UP post
 server.post("/signup", function (req, res, next) {
   console.log("input ==>" + JSON.stringify(req.body));
 
@@ -49,7 +43,11 @@ server.post("/login", function (req, res, next) {
       JSON.parse(users[i]).userEmail === email &&
       JSON.parse(users[i]).userPassword === password
     ) {
-      res.send("login success! Welcome " + JSON.parse(users[i]).userName);
+      res.send(
+        `<h2>Login Success!</h2><br/><h2>Welcome!</h2> <h3>Name:  ${
+          JSON.parse(users[i]).userName
+        }</h3> <h3>Email: ${JSON.parse(users[i]).userEmail}</h3>`
+      );
       console.log(
         "user " + JSON.parse(users[i]).userName + " logged in successfully"
       );
